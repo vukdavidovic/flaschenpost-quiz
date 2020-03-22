@@ -1,6 +1,6 @@
 import {IAnswer, IConstraint} from "./interfaces";
 
-export const validation = (answer: IAnswer, constraints: IConstraint) : string[] => {
+export const validation = (answer: IAnswer, constraints: IConstraint): string[] => {
 
     let errors: string[] = [];
     let questionAnswer = answer.answer;
@@ -26,8 +26,9 @@ export const validation = (answer: IAnswer, constraints: IConstraint) : string[]
                     errors = errors.concat(error);
                 }
                 break;
-            case 'forbiddenWords':
-                error = validateForbiddenWords(questionAnswer, constraints.forbiddenWords);
+            case 'forbidenWords':
+                error = validateForbiddenWords(questionAnswer, constraints.forbidenWords);
+                console.log(error);
                 if (typeof error === "string") {
                     errors = errors.concat(error);
                 }
@@ -60,10 +61,11 @@ const validateMax = (answer: string | string[], max?: number): string | boolean 
 };
 
 const validateForbiddenWords = (answer: string | string[], forbiddenWords?: string[]): string | boolean => {
+    let error: boolean | string = false;
     forbiddenWords?.forEach((item) => {
-        if (answer.indexOf(item)) {
-            return `Answer should not contain ${item}`;
+        if (answer.includes(item)) {
+            error = `Answer should not contain ${item}`;
         }
     });
-    return false;
+    return error;
 };

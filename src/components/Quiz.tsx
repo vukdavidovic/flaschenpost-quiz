@@ -52,14 +52,14 @@ export class Quiz extends Component<{}, IQuizState> {
     }
 
     async componentDidMount(): Promise<any> {
-        await getQuestions().then((questoions) => {
+        await getQuestions().then((questions) => {
             this.setState({
-                questions: questoions,
+                questions: questions,
                 loading: false,
                 currentAnswer: {
-                    answer: questoions[0].input.default ? questoions[0].input.default : '',
-                    question: questoions[0].id,
-                    questionId: questoions[0].question
+                    answer: questions[0].input.default ? questions[0].input.default : '',
+                    question: questions[0].id,
+                    questionId: questions[0].question
                 }
             });
         });

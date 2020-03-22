@@ -15,7 +15,7 @@ export interface IConstraint {
     required: boolean,
     min?: number,
     max?: number,
-    forbiddenWords?: Array<string>
+    forbidenWords?: Array<string>
 }
 
 export interface IAnswer {
