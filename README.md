@@ -2,7 +2,7 @@
 
 ## Installation and running project
 
-1. clone project
+1. Clone project
 2. Install dependencies
 
 `yarn install` or `npm install`
