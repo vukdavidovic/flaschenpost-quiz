@@ -1,6 +1,6 @@
 # Flaschenpost Quiz
 
-## Installation
+## Installation and running project
 
 1. clone project
 2. Install dependencies
