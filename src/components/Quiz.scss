@@ -1,0 +1,48 @@
+@import "../shared/mixins";
+@import "../shared/animations";
+
+.quiz-holder {
+  position: relative;
+}
+
+.counter {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9em;
+
+  span {
+    font-weight: 400;
+
+    > span {
+      font-size: 1.3em;
+      transform: translateY(-50%);
+    }
+
+  }
+}
+
+.thank-you {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate3d(0, -50%, 0);
+}
+
+.errors {
+
+  > span {
+    display: block;
+    background-color: $fourth-color;
+    margin-bottom: 5px;
+    padding: 0.25em 1em;
+    border-radius: 5px;
+
+    i {
+      margin-right: 8px;
+    }
+
+  }
+
+}
+

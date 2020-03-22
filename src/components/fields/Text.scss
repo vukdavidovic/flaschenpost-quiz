@@ -1,0 +1,5 @@
+@import "../../shared/helpers";
+
+input[type='text'] {
+  @extend %input;
+}

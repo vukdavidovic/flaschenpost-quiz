@@ -1,0 +1,26 @@
+@import "~normalize.css/normalize.css";
+
+@import "./shared/typography";
+@import "./shared/grid";
+@import "./shared/alignments";
+@import "./shared/helpers";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+
+body {
+  background-color: $first-color;
+  //because of animations
+  overflow-x: hidden;
+
+  * {
+    box-sizing: border-box;
+  }
+
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

@@ -1,0 +1,58 @@
+@import "variables";
+
+@mixin clearfix() {
+
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+    table-layout: fixed;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+}
+
+@mixin laptop() {
+  @media screen and (max-width: $laptop) {
+    @content
+  }
+}
+
+@mixin mac() {
+  @media screen and (max-width: $mac) {
+    @content
+  }
+}
+
+@mixin ipadLandscape() {
+  @media screen and (max-width: $ipad-landscape) {
+    @content
+  }
+}
+
+@mixin ipadPortrait() {
+  @media screen and (max-width: $ipad-portrait) {
+    @content
+  }
+}
+
+@mixin phoneLandscape() {
+  @media screen and (max-width: $mobile-landscape) {
+    @content
+  }
+}
+
+@mixin phonePortrait() {
+  @media screen and (max-width: $mobile-portrait) {
+    @content
+  }
+}
+
+@mixin smallPhonePortrait() {
+  @media screen and (max-width: $mobile-portrait) {
+    @content
+  }
+}

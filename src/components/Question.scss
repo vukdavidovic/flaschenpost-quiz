@@ -1,0 +1,38 @@
+@import "../shared/variables";
+@import "../shared/mixins";
+
+.question-holder {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate3d(0, -50%, 0);
+}
+
+.question {
+  margin: 1em 0;
+
+  > p {
+    font-size: 2.6em;
+    line-height: 1.3em;
+    font-weight: bold;
+    font-family: $second-font;
+
+    @include phoneLandscape {
+      font-size: 1.4em;
+    }
+
+  }
+
+  .hint {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin: 0 6px;
+  }
+
+  &-enter {
+    background: purple;
+  }
+
+}

@@ -1,0 +1,26 @@
+//Structure
+$laptop: 1440px;
+$mac: 1280px;
+$ipad-landscape: 1025px;
+$ipad-portrait: 769px;
+$mobile-landscape: 601px;
+$mobile-portrait: 481px;
+
+$grid-width: 1000px;
+$logo-height: 45px;
+$mobile-logo-height: 30px;
+
+//Colors
+$light-color: #fff;
+$dark-color: #000;
+$grey-color: #c4c4c4;
+$text-color: #333;
+$first-color: #82be3c;
+$second-color: lighten($first-color,20%);
+$third-color: #fc6c27;
+$fourth-color: #cc0000;
+
+//Fonts
+$first-font: 'Lato', sans-serif;
+$second-font: 'Montserrat', sans-serif;
+

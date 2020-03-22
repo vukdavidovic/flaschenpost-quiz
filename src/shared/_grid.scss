@@ -1,0 +1,64 @@
+@import "mixins";
+
+.container-fluid {
+  padding: 0 20px;
+
+  @include ipadPortrait {
+    padding: 0 30px;
+  }
+
+  @include phoneLandscape {
+    padding: 0 20px;
+  }
+
+}
+
+.container {
+  max-width: $grid-width;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.row {
+  margin: 0 -20px;
+  display: flex;
+  flex-flow: row wrap;
+
+  .col {
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+
+  @for $i from 1 through 12 {
+
+    .col-#{$i} {
+      flex: 0 0 $i * 100% / 12;
+    }
+
+    @include ipadLandscape {
+      .il-col-#{$i} {
+        flex: 0 0 $i * 100% / 12;
+      }
+    }
+
+    @include ipadPortrait {
+      .ip-col-#{$i} {
+        flex: 0 0 $i * 100% / 12;
+      }
+    }
+
+    @include phoneLandscape {
+      .ml-col-#{$i} {
+        flex: 0 0 $i * 100% / 12;
+      }
+    }
+
+    @include phonePortrait {
+      .mp-col-#{$i} {
+        flex: 0 0 $i * 100% / 12;
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,6 @@
+@import "../../shared/variables";
+@import "../../shared/helpers";
+
+.checkbox-label {
+  @extend %input-check;
+}

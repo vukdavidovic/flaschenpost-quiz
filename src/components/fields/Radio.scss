@@ -1,0 +1,6 @@
+@import "../../shared/variables";
+@import "../../shared/helpers";
+
+.radio-label {
+  @extend %input-check;
+}

@@ -1,0 +1,42 @@
+@import "../shared/variables";
+@import "../shared/helpers";
+
+button {
+  appearance: none;
+  color: $light-color;
+  border: none;
+  border-radius: 5px;
+  background-color: $third-color;
+  padding: 14px 44px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: $second-font;
+  cursor: pointer;
+  position: relative;
+  margin-top: 1em;
+  letter-spacing: 1px;
+  @extend %box-shadow;
+  overflow: hidden;
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    font-size: 0.8em;
+    transform: translate3d(0,-50%,0);
+    transition: all 0.35s ease-in-out;
+    opacity: 0;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    .icon {
+      right: 14px;
+      opacity: 1;
+    }
+  }
+
+}

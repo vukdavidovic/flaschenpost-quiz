@@ -1,0 +1,129 @@
+@import "./variables";
+@import "./mixins";
+
+.full-height {
+  min-height: 100vh;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+%box-shadow {
+  box-shadow: 0 0 3px 1px rgba($dark-color, 0.3);
+}
+
+%input {
+  width: 100%;
+  padding: 1.5em 1em;
+  border: 2px solid transparent;
+  font-size: 1.2em;
+  transition: all 0.35s ease-in-out;
+
+  @include phoneLandscape {
+    padding: 1em;
+  }
+
+  &:focus {
+    border-color: $second-color;
+    outline: none;
+  }
+}
+
+//Use this with label wrapping input (checkbox and radio types)
+%input-check {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  @include phoneLandscape {
+    display: block;
+  }
+
+  span {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: $text-color;
+
+    @include phoneLandscape {
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.8em;
+    }
+
+  }
+
+  input {
+    appearance: none;
+    padding: 3em 1em;
+    background-color: $light-color;
+    display: block;
+    margin: 6px;
+    transition: all 0.35s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    min-width: 150px;
+    text-align: center;
+    box-shadow: 0 0;
+    transform: translate3d(0,0,0);
+
+    @include phoneLandscape {
+      min-width: 100%;
+      padding: 1em;
+      margin: 6px 0;
+      font-size: 0.8em;
+    }
+
+    &:hover {
+      background-color: lighten($second-color, 15%);
+      @extend %box-shadow;
+      transform: translate3d(0,-1px,0) scale(1.02);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      font-style: normal;
+      font-feature-settings: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+      content: '\f00c';
+      font-size: 2em;
+      color: $first-color;
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      opacity: 0;
+      transition: opacity 0.35s ease-in-out;
+
+      @include phoneLandscape {
+        font-size: 1em;
+        bottom: 4px;
+      }
+
+    }
+
+    &:checked {
+      &:before {
+        opacity: 1;
+      }
+    }
+
+  }
+
+}
